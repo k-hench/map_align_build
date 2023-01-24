@@ -14,7 +14,7 @@ To make the container publicly available, it is pushed to [dockerhub](https://hu
 
 ```sh
 skopeo login -u khench docker.io
-podman push localhost/map_align docker.io/khench/map_align:v0.1
+podman push localhost/map_align docker.io/khench/map_align:v0.2
 ```
 
 ## Accessing the container
@@ -22,5 +22,6 @@ podman push localhost/map_align docker.io/khench/map_align:v0.1
 The bundled software can be accessed directly from [dockerhub](https://hub.docker.com/r/khench/map_align) with `podman` (or `docker`, or `singularity`):
 
 ```sh
-podman run docker.io/khench/map_align:v0.1 which bwa
+podman run docker.io/khench/map_align:v0.2 which bwa
+singularity run docker://khench/map_align:v0.2 which bwa
 ```
